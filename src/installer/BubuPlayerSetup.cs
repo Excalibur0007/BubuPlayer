@@ -26,9 +26,17 @@ namespace BubuPlayer.Installer
         [STAThread]
         public static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new SetupForm());
+            try
+            {
+                Application.EnableVisualStyles();
+                Application.SetCompatibleTextRenderingDefault(false);
+                Application.Run(new SetupForm());
+            }
+            catch (Exception ex)
+            {
+                File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "installer_crash.txt"), ex.ToString());
+                MessageBox.Show("Installer Error on Launch:\n\n" + ex.Message + "\n\nStack:\n" + ex.StackTrace, "BubuPlayer Setup Crash", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         public SetupForm()
