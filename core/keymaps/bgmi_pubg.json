@@ -1,0 +1,21 @@
+{
+  "game_name": "BGMI / PUBG Mobile",
+  "package": "com.pubg.imobile",
+  "resolution": "1920x1080",
+  "mappings": [
+    { "type": "WASD_DPAD", "key": "WASD", "x": 0.18, "y": 0.72, "radius": 0.14, "sprint_key": "SHIFT" },
+    { "type": "FIRE", "key": "LeftClick", "x": 0.88, "y": 0.62 },
+    { "type": "AIM_LOCK", "key": "RightClick", "x": 0.50, "y": 0.50, "free_look": "ALT" },
+    { "type": "KEY", "key": "Q", "action": "PEEK_LEFT", "x": 0.22, "y": 0.38 },
+    { "type": "KEY", "key": "E", "action": "PEEK_RIGHT", "x": 0.28, "y": 0.38 },
+    { "type": "KEY", "key": "SPACE", "action": "JUMP_VAULT", "x": 0.94, "y": 0.78 },
+    { "type": "KEY", "key": "C", "action": "CROUCH", "x": 0.86, "y": 0.88 },
+    { "type": "KEY", "key": "Z", "action": "PRONE", "x": 0.95, "y": 0.92 },
+    { "type": "KEY", "key": "R", "action": "RELOAD", "x": 0.78, "y": 0.52 },
+    { "type": "KEY", "key": "F", "action": "LOOT_BOX", "x": 0.68, "y": 0.38 },
+    { "type": "KEY", "key": "1", "action": "GUN_PRIMARY", "x": 0.44, "y": 0.90 },
+    { "type": "KEY", "key": "2", "action": "GUN_SECONDARY", "x": 0.56, "y": 0.90 },
+    { "type": "KEY", "key": "TAB", "action": "INVENTORY", "x": 0.08, "y": 0.82 },
+    { "type": "KEY", "key": "M", "action": "OPEN_MAP", "x": 0.94, "y": 0.08 }
+  ]
+}

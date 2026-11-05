@@ -1,0 +1,22 @@
+{
+  "game_name": "Free Fire",
+  "package": "com.dts.freefireth",
+  "resolution": "1920x1080",
+  "mappings": [
+    { "type": "WASD_DPAD", "key": "WASD", "x": 0.15, "y": 0.75, "radius": 0.12, "sensitivity": 1.0 },
+    { "type": "FIRE", "key": "LeftClick", "x": 0.88, "y": 0.65, "burst_mode": false },
+    { "type": "AIM_LOCK", "key": "RightClick", "x": 0.50, "y": 0.50, "sensitivity_x": 1.2, "sensitivity_y": 1.2 },
+    { "type": "KEY", "key": "SPACE", "action": "JUMP", "x": 0.92, "y": 0.85 },
+    { "type": "KEY", "key": "C", "action": "CROUCH", "x": 0.82, "y": 0.90 },
+    { "type": "KEY", "key": "Z", "action": "PRONE", "x": 0.74, "y": 0.92 },
+    { "type": "KEY", "key": "R", "action": "RELOAD", "x": 0.82, "y": 0.45 },
+    { "type": "KEY", "key": "1", "action": "WEAPON_1", "x": 0.42, "y": 0.88 },
+    { "type": "KEY", "key": "2", "action": "WEAPON_2", "x": 0.50, "y": 0.88 },
+    { "type": "KEY", "key": "3", "action": "MELEE_FIST", "x": 0.58, "y": 0.88 },
+    { "type": "KEY", "key": "4", "action": "MEDKIT", "x": 0.08, "y": 0.55 },
+    { "type": "KEY", "key": "F", "action": "INTERACT_LOOT", "x": 0.68, "y": 0.35 },
+    { "type": "KEY", "key": "G", "action": "GRENADE", "x": 0.28, "y": 0.82 },
+    { "type": "KEY", "key": "TAB", "action": "BACKPACK", "x": 0.06, "y": 0.78 },
+    { "type": "KEY", "key": "M", "action": "MAP", "x": 0.94, "y": 0.08 }
+  ]
+}

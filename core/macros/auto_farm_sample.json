@@ -1,0 +1,11 @@
+{
+  "macro_name": "Daily Farm Loop",
+  "loop_count": 999,
+  "loop_delay_ms": 3000,
+  "actions": [
+    { "type": "TAP", "x": 960, "y": 540, "delay_after_ms": 1200 },
+    { "type": "TAP", "x": 1200, "y": 680, "delay_after_ms": 800 },
+    { "type": "SWIPE", "x1": 1000, "y1": 700, "x2": 400, "y2": 700, "duration_ms": 300, "delay_after_ms": 1500 },
+    { "type": "TAP", "x": 1500, "y": 200, "delay_after_ms": 2000 }
+  ]
+}
