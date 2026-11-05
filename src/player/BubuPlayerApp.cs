@@ -55,6 +55,15 @@ namespace BubuPlayer.App
         [STAThread]
         public static void Main()
         {
+            Application.SetUnhandledExceptionMode(UnhandledExceptionMode.CatchException);
+            Application.ThreadException += (s, e) => {
+                File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.txt"), "ThreadException: " + e.Exception.ToString());
+                MessageBox.Show(e.Exception.ToString(), "Thread Exception");
+            };
+            AppDomain.CurrentDomain.UnhandledException += (s, e) => {
+                File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.txt"), "UnhandledException: " + e.ExceptionObject.ToString());
+            };
+
             try
             {
                 Application.EnableVisualStyles();
@@ -63,7 +72,7 @@ namespace BubuPlayer.App
             }
             catch (Exception ex)
             {
-                File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.txt"), ex.ToString());
+                File.WriteAllText(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "crash.txt"), "MainCatch: " + ex.ToString());
                 MessageBox.Show("Fatal Error on Launch:\n\n" + ex.Message, "BubuPlayer Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
@@ -82,8 +91,12 @@ namespace BubuPlayer.App
             statusTimer = new Timer();
             statusTimer.Interval = 2000;
             statusTimer.Tick += (s, e) => {
-                long memBytes = Process.GetCurrentProcess().WorkingSet64;
-                lblRam.Text = string.Format("Bubu Host: {0} MB | Zero Ads", memBytes / (1024 * 1024));
+                try {
+                    long memBytes = Process.GetCurrentProcess().WorkingSet64;
+                    if (lblRam != null && !lblRam.IsDisposed) {
+                        lblRam.Text = string.Format("Bubu Host: {0} MB | Zero Ads", memBytes / (1024 * 1024));
+                    }
+                } catch {}
             };
             statusTimer.Start();
         }
