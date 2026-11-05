@@ -1,0 +1,53 @@
+{
+  "android": {
+    "startup": {
+      "launch_mode": "headless_fast"
+    }
+  },
+  "display": {
+    "systemmouse": "true",
+    "fps_limit": 30,
+    "vsync": "false",
+    "resolution": {
+      "width": 960,
+      "height": 540,
+      "dpi": 160
+    }
+  },
+  "vm": {
+    "cpu": "1",
+    "memory": "1.250000",
+    "gpu": {
+      "model": "Adreno (TM) 640",
+      "renderer": "DirectX11_Direct3D"
+    },
+    "audio": {
+      "enabled": false
+    },
+    "nat": {
+      "port_forward": {
+        "adb": {
+          "host_port": "7555",
+          "guest_port": "5555"
+        },
+        "input": {
+          "host_port": "18438",
+          "guest_port": "18438"
+        }
+      }
+    },
+    "phone": {
+      "brand": "Samsung",
+      "code": "a54x",
+      "manufacturer": "Samsung",
+      "model": "Galaxy A54 5G",
+      "rom": {
+        "reset": "0"
+      }
+    },
+    "root": {
+      "type": "KernelSU",
+      "status": "enabled"
+    }
+  }
+}

@@ -1,0 +1,13 @@
+# NetEase & MuMu Player Telemetry / Ad Blocker Hosts
+127.0.0.1 ad.mumu.163.com
+127.0.0.1 tracking.mumu.163.com
+127.0.0.1 notice.mumu.163.com
+127.0.0.1 api.mumu.163.com
+127.0.0.1 log.mumu.163.com
+127.0.0.1 stat.mumu.163.com
+127.0.0.1 da.mumu.163.com
+127.0.0.1 hub.mumu.163.com
+127.0.0.1 update.mumu.163.com
+127.0.0.1 report.mumu.163.com
+127.0.0.1 activity.mumu.163.com
+127.0.0.1 game.mumu.163.com

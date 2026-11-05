@@ -1,0 +1,27 @@
+# Disk Images and Virtual Hard Disks
+*.vdi
+*.vmdk
+*.raw
+*.img
+*.iso
+*.qcow2
+
+# Logs and runtime caches
+*.log
+*.tmp
+logs/
+cache/
+report_data/
+cef-crash-files/
+nxmain-crash-files/
+
+# Temporary files & backups
+*.bak
+*.orig
+private_shared/
+SharedFolder/
+
+# OS Specific
+Thumbs.db
+Desktop.ini
+.DS_Store
